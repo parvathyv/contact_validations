@@ -19,12 +19,12 @@ feature "User creates a contact" do
 
     click_on "Create"
 
-    expect(page).to have_content "There were some errors the provided information."
     expect(page).to have_content "Email can't be blank"
     expect(page).to have_content "First name can't be blank"
     expect(page).to have_content "Last name can't be blank"
     expect(page).to have_content "Phone can't be blank"
     expect(page).to have_content "State can't be blank"
+    expect(page).to have_content "There were some errors the provided information."
   end
 
   scenario "user submits a contact with a duplicate email" do
