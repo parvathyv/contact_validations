@@ -62,9 +62,9 @@ feature "User creates a contact" do
   scenario "user submits contact with state that isn't real" do
     visit '/contacts/new'
 
-    fill_in "Notes", with: ('x' * 501)
+    fill_in "State", with: 'AX'
     click_on "Create"
 
-    expect(page).to have_content "Notes are too long (max 500 characters)"
+    expect(page).to have_content "State must be real"
   end
 end
