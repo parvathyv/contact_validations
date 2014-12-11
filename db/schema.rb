@@ -27,4 +27,6 @@ ActiveRecord::Schema.define(version: 20140911204159) do
     t.text   "notes"
   end
 
+  add_index "contacts", ["email"], name: "index_contacts_on_email", unique: true, using: :btree
+
 end
